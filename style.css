@@ -769,6 +769,13 @@ h2 {
     line-height: 1.4em;
 }
 
+.bloc-2__heading, .bloc-4__heading
+{
+    text-align: center;
+    font-weight: 400;
+    color: #333333;
+}
+
 h3 {
     font-size: 15px;
     text-transform: uppercase;
@@ -917,6 +924,30 @@ h1 {
     margin: -1px;
     overflow: hidden;
     clip-path: polygon(0,0,0,0);
+    border: 0;
+}
+
+.blockquote__quote
+{
+    margin-bottom: 0;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333333;
+    font-weight: 400;
+}
+
+.blockquote__author
+{
+    color: #333333;
+}
+
+.bloc-3__heading
+{
+    font-size: 1.5em;
+}
+
+blockquote
+{
     border: 0;
 }
 
