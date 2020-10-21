@@ -13,7 +13,7 @@ button {
     outline: none!important;
 }
 
-a:hover {
+a:hover, a:focus {
     text-decoration: none;
     cursor: pointer;
 }
@@ -88,11 +88,13 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 0;
 }
 
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
+    z-index: -1;
 }
 
 .b-parallax {
@@ -103,7 +105,8 @@ a:hover {
     color: rgba(255, 255, 255, .7);
 }
 
-.d-bloc button:hover {
+.d-bloc button:hover,
+.d-bloc button:focus  {
     color: rgba(255, 255, 255, .9);
 }
 
@@ -133,7 +136,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .a-btn:hover,
@@ -149,8 +152,22 @@ a:hover {
 .d-bloc h4 a:hover,
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
-.d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+.d-bloc p a:hover,
+.d-bloc .a-btn:focus,
+.d-bloc .navbar a:focus,
+.d-bloc .navbar-brand:focus,
+.d-bloc a:focus .icon-sm,
+.d-bloc a:focus .icon-md,
+.d-bloc a:focus .icon-lg,
+.d-bloc a:focus .icon-xl,
+.d-bloc h1 a:focus,
+.d-bloc h2 a:focus,
+.d-bloc h3 a:focus,
+.d-bloc h4 a:focus,
+.d-bloc h5 a:focus,
+.d-bloc h6 a:focus,
+.d-bloc p a:focus {
+    color: rgba(255, 255, 255, .7);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -183,12 +200,14 @@ a:hover {
     color: rgba(0, 0, 0, .6);
 }
 
-.d-bloc .panel .a-btn:hover {
+.d-bloc .panel .a-btn:hover,
+.d-bloc .panel .a-btn:focus {
     color: rgba(0, 0, 0, 1);
 }
 
 .d-bloc .panel .btn-wire,
-.d-bloc .panel .btn-wire:hover {
+.d-bloc .panel .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus {
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
@@ -199,7 +218,9 @@ a:hover {
 }
 
 .d-bloc .panel button:hover,
-.l-bloc button:hover {
+.l-bloc button:hover,
+.d-bloc .panel button:focus,
+.l-bloc button:focus  {
     color: rgba(0, 0, 0, .7);
 }
 
@@ -231,7 +252,7 @@ a:hover {
 .l-bloc h5 a,
 .l-bloc h6 a,
 .l-bloc p a {
-    color: rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, 1);
 }
 
 .d-bloc .panel .a-btn:hover,
@@ -248,8 +269,23 @@ a:hover {
 .l-bloc h4 a:hover,
 .l-bloc h5 a:hover,
 .l-bloc h6 a:hover,
-.l-bloc p a:hover {
-    color: rgba(0, 0, 0, 1);
+.l-bloc p a:hover,
+.d-bloc .panel .a-btn:focus,
+.l-bloc .a-btn:focus,
+.l-bloc .navbar a:focus,
+.l-bloc .navbar-brand:focus,
+.l-bloc a:focus .icon-sm,
+.l-bloc a:focus .icon-md,
+.l-bloc a:focus .icon-lg,
+.l-bloc a:focus .icon-xl,
+.l-bloc h1 a:focus,
+.l-bloc h2 a:focus,
+.l-bloc h3 a:focus,
+.l-bloc h4 a:focus,
+.l-bloc h5 a:focus,
+.l-bloc h6 a:focus,
+.l-bloc p a:focus {
+    color: #b0633f;
 }
 
 .l-bloc .navbar-toggle .icon-bar {
@@ -258,8 +294,10 @@ a:hover {
 
 .d-bloc .panel .btn-wire,
 .d-bloc .panel .btn-wire:hover,
+.d-bloc .panel .btn-wire:focus,
 .l-bloc .btn-wire,
-.l-bloc .btn-wire:hover {
+.l-bloc .btn-wire:hover,
+.l-bloc .btn-wire:focus {
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
@@ -371,7 +409,8 @@ a:hover {
         -webkit-transform: translateY(-50%);
     }
     .nav > li .dropdown-menu a,
-    .nav > li .dropdown-menu a:hover {
+    .nav > li .dropdown-menu a:hover,
+    .nav > li .dropdown-menu a:focus {
         color: #484848;
     }
     .nav-invert .site-navigation {
@@ -506,8 +545,24 @@ button {
 }
 
 .form-control {
-    border-color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, 1);
     box-shadow: none;
+}
+
+.form-control:hover,
+.form-control:focus
+{
+    border-color: #b0633f;
+}
+
+.form-label
+{
+    color: #000;
+}
+
+.form-txt
+{
+    color: #000;
 }
 
 .scrollToTop {
@@ -536,7 +591,8 @@ a[data-lightbox] {
     text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before,
+a[data-lightbox]:focus::before {
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
@@ -554,7 +610,8 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img
+a[data-lightbox]:focus img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -602,7 +659,10 @@ a[data-lightbox]:hover img {
 
 .close-lightbox:hover,
 .next-lightbox:hover,
-.prev-lightbox:hover {
+.prev-lightbox:hover,
+.close-lightbox:focus,
+.next-lightbox:focus,
+.prev-lightbox:focus  {
     opacity: 1.0;
     color: #FFF;
 }
@@ -648,8 +708,8 @@ h6,
 p,
 label,
 .btn,
-a {
-    font-family: "helvetica";
+{
+    font-family: "helvetica", sans serif;
     font-weight: 400;
     color: #575757!important;
 }
@@ -677,7 +737,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -724,10 +784,7 @@ h3 {
 
 h1 {
     color: #333333!important;
-}
-
-h4 {
-    color: #333333!important;
+    font-weight: 400;
 }
 
 .icons {
@@ -753,13 +810,19 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(158, 141, 93, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
+    text-decoration: none;
+}
+
+.bold-link:hover,
+.bold-link:focus
+{
+    text-decoration: underline;
 }
 
 .bgc-white {
@@ -771,20 +834,21 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #b0633f;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #b0633f;
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
+.btn-atomic-tangerine:hover,
+.btn-atomic-tangerine:focus {
+    background: #925335!important;
     color: #FFFFFF!important;
 }
 
@@ -792,15 +856,12 @@ h4 {
     color: #FFFFFF!important;
 }
 
-.ltc-white:hover {
-    color: #cccccc!important;
-}
-
 .ltc-atomic-tangerine {
     color: #F3976C!important;
 }
 
-.ltc-atomic-tangerine:hover {
+.ltc-atomic-tangerine:hover,
+.ltc-atomic-tangerine:focus {
     color: #c27956!important;
 }
 
@@ -811,6 +872,7 @@ h4 {
 
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
+    z-index: 0;
 }
 
 .bg-lines-h2-bg {
@@ -819,10 +881,43 @@ h4 {
 
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
+    z-index: 0;
 }
 
 .bg-presentation {
     background-image: url("img/image-de-presentation.bmp");
+    z-index: 0;
+}
+
+.footer-link
+{
+    line-height: 25px;
+    color: #fff;
+    font-family: "helvetica";
+    font-weight: 400;
+}
+
+.footer-link:hover, .footer-link:focus
+{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer-heading
+{
+    color: #fff;
+}
+
+.sr-only
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0,0,0,0);
+    border: 0;
 }
 
 @media (max-width: 1024px) {
