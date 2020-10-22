@@ -951,6 +951,11 @@ blockquote
     border: 0;
 }
 
+strong
+{
+    font-weight: normal;
+}
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
